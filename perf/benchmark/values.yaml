@@ -5,13 +5,17 @@ includeOutboundIPRanges: ""
 appresources: {}
 
 proxy:
-  cpu: "1000m"
+  cpu: "200m"
   memory: "512Mi"
+  image: "docker.io/tanjunchen/proxyv2:1.15.7-tanjunchen"
 
 appresources1:
   requests:
-    cpu: "1500m"
-    memory: "1000Mi"
+    cpu: "200m"
+    memory: "512Mi"
+  limits:
+    cpu: "200m"
+    memory: "512Mi"
 
 fortioImage: fortio/fortio:latest_release
 curlImage: cfmanteiga/alpine-bash-curl-jq:latest

@@ -44,7 +44,6 @@ def pod_info(filterstr="", namespace=NAMESPACE, multi_ok=True):
     op = getoutput(cmd)
     o = json.loads(op)
     items = o['items']
-
     if not multi_ok and len(items) > 1:
         raise Exception("more than one found " + op)
 
